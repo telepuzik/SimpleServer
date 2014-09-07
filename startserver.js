@@ -3,7 +3,7 @@
  */
 var http = require('http');
 var serverIp = "192.168.1.100";
-var serverPort = 8888;
+var serverPort = 8889;
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write('<!doctype html>\n<html lang="en">\n' +
