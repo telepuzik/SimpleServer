@@ -3,7 +3,7 @@
  */
 var http = require('http');
 var serverIp = "192.168.1.100";
-var serverPort = 8889;
+var serverPort = 8888;
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write('<!doctype html>\n<html lang="en">\n' +
@@ -14,4 +14,4 @@ http.createServer(function (req, res) {
         '\n</body>\n</html>');
     res.end();
 }).listen(serverPort, serverIp);
-console.log('My server running at http://' + serverIp + ':' + serverPort);
+console.log('Server running at http://' + serverIp + ':' + serverPort);
