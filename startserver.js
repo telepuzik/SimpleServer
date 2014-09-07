@@ -14,4 +14,4 @@ http.createServer(function (req, res) {
         '\n</body>\n</html>');
     res.end();
 }).listen(serverPort, serverIp);
-console.log('Server running at http://' + serverIp + ':' + serverPort);
+console.log('Now server running at http://' + serverIp + ':' + serverPort);
