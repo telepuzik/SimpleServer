@@ -32,6 +32,7 @@ function CreateHtmlServer(){
     });
     server.listen(serverPort, serverIp);
     console.log('Server now running at http://' + serverIp + ':' + serverPort);
+    console.log(__dirname);
 }
 
 var http = require('http');
