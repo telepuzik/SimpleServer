@@ -38,6 +38,7 @@ function CreateMultiServer (){
     http.createServer( function(req, res) {
         var now = new Date();
         var filename = req.url || "index.html";
+        console.log("filename:" + filename + "; url:" + req.uri );
         var ext = path.extname(filename);
         var localPath = __dirname;
         var validExtensions = {
