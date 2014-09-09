@@ -11,6 +11,8 @@ http.createServer(function (req, res) {
         '<style type="text/css">* {font-family:arial, sans-serif;}</style>\n' +
         '</head>\n<body>\n<h1>Euro 2012 teams</h1>\n' +
         '<div id="content"><p>The teams in Group D for Euro 2012 are:</p><ul><li>England</li><li>France</li><li>Sweden</li><li>Ukraine</li></ul></div>' +
+        '<div id="currentWord">Current Form</div>' +
+        '<div id="wordsForm"><input id="formZero"><input id="formOne"><input id="formTwo"><input id="formThree"><input id="formFour"><input id="formFive"></div>' +
         '\n</body>\n</html>');
     res.end();
 }).listen(serverPort, serverIp);
