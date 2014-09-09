@@ -103,7 +103,7 @@ var http = require('http');
 var fs = require('fs');
 var path = require('path');
 var serverIp = "192.168.1.100";
-var serverPort = 8888;
+var serverPort = 80;
 
 //CreateBasicServer();
 //CreateHtmlServer();
