@@ -16,5 +16,12 @@ http.createServer(function (req, res) {
 }).listen(serverPort, serverIp);
 console.log('Server now running at http://' + serverIp + ':' + serverPort);
 
-var module = require('./module.js');
-console.log(module.func("myval"));
+var wordslib = require('./wordslib.js');
+var words = wordslib.getWords();
+
+for (var i= 0; i<words.length; i++){
+    currentWord = words[i];
+    console.log (currentWord.formZero + ", " + currentWord.formOne + ", " +currentWord.formTwo + ", " +currentWord.formThree + ", " +currentWord.formFour + ", " + currentWord.formFive);
+}
+
+console.log("fin");
