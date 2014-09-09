@@ -56,6 +56,7 @@ function CreateMultiServer (){
             ".gif": "image/gif",
             ".png": "image/png"
         };
+        console.log("ext:" + ext);
         var isValidExt = validExtensions[ext];
 
         if (isValidExt) {
