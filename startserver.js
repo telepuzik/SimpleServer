@@ -20,7 +20,7 @@ function CreateBasicServer (){
 function CreateHtmlServer(){
     var server = http.createServer(function(req, res) {
         console.log("Request: " + req.url);
-        if(req.url == "/words.html") {
+        if(req.url == "/words") {
             fs.readFile("words.html", function(err, text){
                 res.setHeader("Content-Type", "text/html");
                 res.end(text);
