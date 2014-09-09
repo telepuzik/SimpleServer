@@ -28,7 +28,7 @@ function CreateHtmlServer(){
             return;
         }
         res.setHeader("Content-Type", "text/html");
-        res.end('<p>Hello World.</p>\n' + '<a href="/words">Verbs</a>');
+        res.end('<p>Hello World.</p>\n' + '<a href="/words.html">Verbs</a>');
     });
     server.listen(serverPort, serverIp);
     console.log('Server now running at http://' + serverIp + ':' + serverPort);
@@ -36,9 +36,9 @@ function CreateHtmlServer(){
 
 function CreateMultiServer (){
     http.createServer( function(req, res) {
-        var now = new Date();
+        //var now = new Date();
         var filename = req.url || "index.html";
-        console.log("filename:" + filename + "; url:" + req.uri );
+        console.log("filename:" + filename + "; url:" + req.url );
         var ext = path.extname(filename);
         var localPath = __dirname;
         var validExtensions = {
