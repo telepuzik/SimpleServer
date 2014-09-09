@@ -17,4 +17,4 @@ http.createServer(function (req, res) {
 console.log('Server now running at http://' + serverIp + ':' + serverPort);
 
 var module = require('./module.js');
-console.log(module.func("a"));
+console.log(module.func("myval"));
