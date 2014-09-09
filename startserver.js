@@ -59,7 +59,7 @@ function CreateMultiServer (){
         if (ext === "") {
             ext = ".html";
             filename += ".html";
-            console.log("empty path. now: " + localPath);
+            console.log("empty path. now: " + filename);
         }
         var isValidExt = validExtensions[ext];
 
