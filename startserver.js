@@ -38,13 +38,13 @@ function CreateMultiServer (){
     http.createServer( function(req, res) {
         //var now = new Date();
 
-        if (!((req.url == "") || (req.url == "/"))) {
+        if (!((req.url === "") || (req.url === "/"))) {
             var filename = req.url;
         } else {
             var filename = "/index.html";
         }
 
-        console.log("filename:" + filename + "; url:" + req.url );
+        //console.log("filename:" + filename + "; url:" + req.url );
         var ext = path.extname(filename);
         var localPath = __dirname;
         var validExtensions = {
@@ -56,7 +56,9 @@ function CreateMultiServer (){
             ".gif": "image/gif",
             ".png": "image/png"
         };
-        console.log("ext:" + ext);
+        if (ext === "") {
+            ext = ".html";
+        }
         var isValidExt = validExtensions[ext];
 
         if (isValidExt) {
