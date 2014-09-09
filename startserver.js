@@ -37,7 +37,13 @@ function CreateHtmlServer(){
 function CreateMultiServer (){
     http.createServer( function(req, res) {
         //var now = new Date();
-        var filename = req.url || "index.html";
+
+        if (!((req.url == "") || (req.url == "/"))) {
+            var filename = req.url;
+        } else {
+            var filename = "index.html";
+        }
+
         console.log("filename:" + filename + "; url:" + req.url );
         var ext = path.extname(filename);
         var localPath = __dirname;
