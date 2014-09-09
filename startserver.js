@@ -31,6 +31,7 @@ function CreateHtmlServer(){
         res.end("<p>Hello World.</p>");
     });
     server.listen(serverPort, serverIp);
+    console.log('Server now running at http://' + serverIp + ':' + serverPort);
 }
 
 var http = require('http');
@@ -46,7 +47,7 @@ var words = wordslib.getWords();
 
 for (var i= 0; i<words.length; i++){
     currentWord = words[i];
-    console.log (currentWord.formZero + ", " + currentWord.formOne + ", " +currentWord.formTwo + ", " +currentWord.formThree + ", " +currentWord.formFour + ", " + currentWord.formFive);
+    //console.log (currentWord.formZero + ", " + currentWord.formOne + ", " +currentWord.formTwo + ", " +currentWord.formThree + ", " +currentWord.formFour + ", " + currentWord.formFive);
 }
 
-console.log("fin");
+//console.log("fin");
