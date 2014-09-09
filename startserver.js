@@ -28,7 +28,7 @@ function CreateHtmlServer(){
             return;
         }
         res.setHeader("Content-Type", "text/html");
-        res.end('<p>Hello World!.</p>\n' + '<a href="/words">Verbs</a>');
+        res.end('<p>Hello World.</p>\n' + '<a href="/words">Verbs</a>');
     });
     server.listen(serverPort, serverIp);
     console.log('Server now running at http://' + serverIp + ':' + serverPort);
