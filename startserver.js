@@ -18,7 +18,19 @@ function CreateBasicServer (){
 }
 
 function CreateHtmlServer(){
-
+    var server = http.createServer(function(req, res) {
+        console.log("Request: " + req.url);
+        if(req.url == "/words.html") {
+            fs.readFile("words.html", function(err, text){
+                res.setHeader("Content-Type", "text/html");
+                res.end(text);
+            });
+            return;
+        }
+        res.setHeader("Content-Type", "text/html");
+        res.end("<p>Hello World.</p>");
+    });
+    server.listen(serverPort, serverIp);
 }
 
 var http = require('http');
@@ -26,7 +38,8 @@ var fs = require('fs');
 var serverIp = "192.168.1.100";
 var serverPort = 8888;
 
-CreateBasicServer();
+//CreateBasicServer();
+CreateHtmlServer();
 
 var wordslib = require('./wordslib.js');
 var words = wordslib.getWords();
