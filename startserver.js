@@ -58,6 +58,8 @@ function CreateMultiServer (){
         };
         if (ext === "") {
             ext = ".html";
+            localPath += ".html";
+            console.log("empty path. now: " + localPath);
         }
         var isValidExt = validExtensions[ext];
 
