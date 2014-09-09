@@ -41,7 +41,7 @@ function CreateMultiServer (){
         if (!((req.url == "") || (req.url == "/"))) {
             var filename = req.url;
         } else {
-            var filename = "index.html";
+            var filename = "/index.html";
         }
 
         console.log("filename:" + filename + "; url:" + req.url );
